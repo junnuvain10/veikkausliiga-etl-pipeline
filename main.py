@@ -24,7 +24,7 @@ def run_etl():
     DB_USER = os.getenv("DB_USER")
     DB_PASSWORD = os.getenv("DB_PASSWORD")
     # Name of the table that will contain the standings.
-    TARGET_TABLE = 'standings'
+    TARGET_TABLE = 'veikkausliiga_standings'
 
     # Define the API endpoint, query parameters, and authentication header.
     url = "https://v3.football.api-sports.io/standings"
