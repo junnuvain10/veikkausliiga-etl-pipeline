@@ -9,28 +9,7 @@ and loads the structured data into a PostgreSQL relational database using batch 
 
 ## Architecture
 
-```mermaid
-flowchart LR
-
-    subgraph Source ["<b>Source</b>"]
-        A[REST API<br/>API Football]
-    end
-
-    subgraph ETL ["<b>ETL Pipeline</b>"]
-        B(Extraction<br/>Python)
-        C(Transformation<br/>Pandas)
-        D[(Load<br/>PostgreSQL)]
-    end
-
-    subgraph Analysis ["<b>Analysis</b>"]
-        E[Standings]
-    end
-
-    A -->|GET Request| B
-    B -->|Raw JSON| C
-    C -->|Batch Insert| D
-    D -->|Serve| E
-```
+![Architecture](docs/architecture.png)
 
 ---
 
